@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: smart-money-tracker-api
+    env: python
+    region: singapore
+    plan: free
+    branch: main
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: smart-money-tracker-db
+          property: connectionString
+    healthCheckPath: /health
+
+databases:
+  - name: smart-money-tracker-db
+    databaseName: smart_money_tracker
+    user: smart_money_user
+    plan: free
+    region: singapore
