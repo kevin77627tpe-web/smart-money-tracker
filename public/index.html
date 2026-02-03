@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Money Tracker - 專業交易員錢包追蹤</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-blue-400">💎 Smart Money Tracker</h1>
+                <div class="space-x-4">
+                    <a href="#features" class="hover:text-blue-400">功能</a>
+                    <a href="#pricing" class="hover:text-blue-400">方案</a>
+                    <a href="#api" class="hover:text-blue-400">API</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-4 py-20 text-center">
+        <div class="fade-in">
+            <h2 class="text-5xl font-bold mb-6">追蹤專業交易員，<br/>複製成功策略</h2>
+            <p class="text-xl text-gray-400 mb-8">即時監控鏈上聰明錢動向，獲取交易提醒</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-lg font-semibold transition">
+                    立即開始
+                </button>
+                <button class="border border-gray-600 hover:border-gray-400 px-8 py-3 rounded-lg transition">
+                    查看演示
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-gray-800 p-6 rounded-lg text-center fade-in">
+                <div class="text-3xl font-bold text-blue-400">500+</div>
+                <div class="text-gray-400 mt-2">追蹤錢包</div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg text-center fade-in" style="animation-delay: 0.1s">
+                <div class="text-3xl font-bold text-green-400">78%</div>
+                <div class="text-gray-400 mt-2">平均勝率</div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg text-center fade-in" style="animation-delay: 0.2s">
+                <div class="text-3xl font-bold text-purple-400">$12M</div>
+                <div class="text-gray-400 mt-2">總追蹤資產</div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg text-center fade-in" style="animation-delay: 0.3s">
+                <div class="text-3xl font-bold text-yellow-400">24/7</div>
+                <div class="text-gray-400 mt-2">即時監控</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container mx-auto px-4 py-20">
+        <h3 class="text-4xl font-bold text-center mb-12">核心功能</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-8 rounded-lg fade-in">
+                <div class="text-4xl mb-4">📊</div>
+                <h4 class="text-xl font-bold mb-4">錢包追蹤</h4>
+                <p class="text-gray-400">即時追蹤專業交易員的鏈上交易，包含買入/賣出時機、持倉變化</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg fade-in" style="animation-delay: 0.1s">
+                <div class="text-4xl mb-4">🏆</div>
+                <h4 class="text-xl font-bold mb-4">排行榜</h4>
+                <p class="text-gray-400">根據 PnL、勝率、交易量等指標，篩選出表現最佳的交易員</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg fade-in" style="animation-delay: 0.2s">
+                <div class="text-4xl mb-4">🔔</div>
+                <h4 class="text-xl font-bold mb-4">智能提醒</h4>
+                <p class="text-gray-400">當追蹤的錢包有重大交易時，立即通過 Telegram/Discord 通知</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Data -->
+    <section class="container mx-auto px-4 py-20 bg-gray-800/30">
+        <h3 class="text-4xl font-bold text-center mb-12">即時排行榜</h3>
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <table class="w-full">
+                    <thead class="bg-gray-700">
+                        <tr>
+                            <th class="px-6 py-4 text-left">排名</th>
+                            <th class="px-6 py-4 text-left">錢包地址</th>
+                            <th class="px-6 py-4 text-right">總 PnL</th>
+                            <th class="px-6 py-4 text-right">勝率</th>
+                            <th class="px-6 py-4 text-right">交易數</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700">
+                        <tr class="hover:bg-gray-700/50">
+                            <td class="px-6 py-4">🥇 1</td>
+                            <td class="px-6 py-4 font-mono text-sm">0x742d...0bEb</td>
+                            <td class="px-6 py-4 text-right text-green-400 font-bold">+$1,250,000</td>
+                            <td class="px-6 py-4 text-right">78%</td>
+                            <td class="px-6 py-4 text-right">145</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/50">
+                            <td class="px-6 py-4">🥈 2</td>
+                            <td class="px-6 py-4 font-mono text-sm">0x28C6...1d60</td>
+                            <td class="px-6 py-4 text-right text-green-400 font-bold">+$890,000</td>
+                            <td class="px-6 py-4 text-right">72%</td>
+                            <td class="px-6 py-4 text-right">89</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/50">
+                            <td class="px-6 py-4">🥉 3</td>
+                            <td class="px-6 py-4 font-mono text-sm">0x9876...abcd</td>
+                            <td class="px-6 py-4 text-right text-green-400 font-bold">+$650,000</td>
+                            <td class="px-6 py-4 text-right">68%</td>
+                            <td class="px-6 py-4 text-right">156</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container mx-auto px-4 py-20">
+        <h3 class="text-4xl font-bold text-center mb-12">訂閱方案</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 fade-in">
+                <h4 class="text-2xl font-bold mb-4">免費版</h4>
+                <div class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-400">/月</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ 追蹤 5 個錢包</li>
+                    <li>✓ 基礎排行榜</li>
+                    <li>✓ 每日交易摘要</li>
+                </ul>
+                <button class="w-full bg-gray-700 hover:bg-gray-600 py-3 rounded-lg transition">開始使用</button>
+            </div>
+            <div class="bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-lg border-2 border-blue-400 transform scale-105 fade-in" style="animation-delay: 0.1s">
+                <div class="bg-blue-500 text-xs px-3 py-1 rounded-full inline-block mb-4">推薦</div>
+                <h4 class="text-2xl font-bold mb-4">專業版</h4>
+                <div class="text-4xl font-bold mb-6">$49<span class="text-lg">/月</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ 追蹤 50 個錢包</li>
+                    <li>✓ 完整排行榜 + 篩選</li>
+                    <li>✓ 即時 Telegram 提醒</li>
+                    <li>✓ 歷史回測功能</li>
+                </ul>
+                <button class="w-full bg-white text-blue-600 hover:bg-gray-100 py-3 rounded-lg font-bold transition">立即升級</button>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 fade-in" style="animation-delay: 0.2s">
+                <h4 class="text-2xl font-bold mb-4">企業版</h4>
+                <div class="text-4xl font-bold mb-6">$499<span class="text-lg text-gray-400">/月</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ 無限錢包追蹤</li>
+                    <li>✓ API 訪問權限</li>
+                    <li>✓ 自訂提醒規則</li>
+                    <li>✓ 專屬技術支援</li>
+                </ul>
+                <button class="w-full bg-gray-700 hover:bg-gray-600 py-3 rounded-lg transition">聯繫我們</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Demo -->
+    <section id="api" class="container mx-auto px-4 py-20 bg-gray-800/30">
+        <h3 class="text-4xl font-bold text-center mb-12">API 文檔</h3>
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-900 p-6 rounded-lg mb-4">
+                <div class="text-sm text-gray-400 mb-2">GET /api/wallets</div>
+                <pre class="text-green-400 text-sm overflow-x-auto"><code>{
+  "wallets": [
+    {
+      "address": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+      "total_pnl": 1250000,
+      "win_rate": 0.78,
+      "total_trades": 145
+    }
+  ]
+}</code></pre>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-lg">
+                <div class="text-sm text-gray-400 mb-2">GET /api/leaderboard</div>
+                <pre class="text-green-400 text-sm overflow-x-auto"><code>{
+  "leaderboard": [
+    {"rank": 1, "address": "0x742d35Cc", "pnl": 1250000, "win_rate": 78},
+    {"rank": 2, "address": "0x28C6c062", "pnl": 890000, "win_rate": 72}
+  ]
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-12">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>© 2024 Smart Money Tracker. 追蹤聰明錢，複製成功策略。</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white">Twitter</a>
+                <a href="#" class="hover:text-white">Discord</a>
+                <a href="#" class="hover:text-white">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 簡單的 API 測試功能
+        async function testAPI() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                console.log('API Status:', data);
+            } catch (error) {
+                console.log('API not available in demo mode');
+            }
+        }
+
+        // 頁面載入時測試 API
+        testAPI();
+    </script>
+</body>
+</html>
